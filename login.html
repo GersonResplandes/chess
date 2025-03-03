@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - Plataforma de Xadrez</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(
+          to right,
+          rgba(227, 242, 253, 0.8),
+          rgba(187, 222, 251, 0.8),
+          rgba(144, 202, 249, 0.8)
+        );
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+      .login-container {
+        background: rgba(255, 255, 255, 0.3); /* Efeito de vidro */
+        backdrop-filter: blur(10px); /* Desfoque para o efeito de vidro */
+        border: 1px solid rgba(255, 255, 255, 0.4); /* Borda sutil */
+        padding: 2.5rem;
+        border-radius: 20px; /* Bordas mais arredondadas */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out; /* Animação de entrada */
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .login-container h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: #1a237e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      .form-group {
+        margin-bottom: 1.5rem;
+        text-align: left;
+      }
+      .form-group label {
+        font-weight: 500;
+        color: #2c3e50;
+      }
+      .form-control {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid rgba(221, 221, 221, 0.5); /* Borda mais suave */
+        border-radius: 10px; /* Bordas mais arredondadas */
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+      }
+      .form-control:focus {
+        border-color: #1565c0;
+        box-shadow: 0 0 10px rgba(21, 101, 192, 0.3); /* Sombra mais suave */
+        background: rgba(255, 255, 255, 1); /* Fundo branco ao focar */
+      }
+      .input-icon {
+        position: relative;
+      }
+      .input-icon i {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+        color: #777;
+      }
+      .input-icon .form-control {
+        padding-left: 2.5rem;
+      }
+      .btn-login {
+        background-color: #1565c0;
+        color: #ffffff;
+        font-weight: 500;
+        padding: 0.75rem;
+        border-radius: 10px; /* Bordas mais arredondadas */
+        border: none;
+        width: 100%;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      .btn-login:hover {
+        background-color: #0d47a1;
+      }
+      .links {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+      .links a {
+        color: #1565c0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .links a:hover {
+        color: #0d47a1;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <!-- Título com Ícone -->
+      <h2><i class="fas fa-chess-knight"></i> Login</h2>
+      <form id="loginForm">
+        <!-- Campo de E-mail -->
+        <div class="form-group input-icon">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="E-mail"
+            required
+          />
+        </div>
+        <!-- Campo de Senha -->
+        <div class="form-group input-icon">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Senha"
+            required
+          />
+        </div>
+        <!-- Botão de Login com Ícone -->
+        <button type="submit" class="btn btn-login">
+          <i class="fas fa-sign-in-alt"></i> Entrar
+        </button>
+        <!-- Links com Ícones -->
+        <div class="links">
+          <a href="#">
+            <i class="fas fa-question-circle"></i> Esqueceu a senha?
+          </a>
+          <a href="criar-conta.html">
+            <i class="fas fa-user-plus"></i> Criar uma conta
+          </a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      // Simulação de redirecionamento após o login
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Evita o envio do formulário
+
+          // Simula uma validação bem-sucedida
+          const email = document.querySelector('input[type="email"]').value;
+          const password = document.querySelector(
+            'input[type="password"]'
+          ).value;
+
+          if (email && password) {
+            alert("Login bem-sucedido! Redirecionando...");
+            window.location.href = "inicial.html"; // Redireciona para a página de dashboard
+          } else {
+            alert("Por favor, preencha todos os campos.");
+          }
+        });
+    </script>
+  </body>
+</html>
